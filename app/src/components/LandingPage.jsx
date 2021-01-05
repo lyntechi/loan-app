@@ -3,7 +3,7 @@ import { FcLock } from "react-icons/fc";
 import { convertToNumber } from "../utils/convertToNumber";
 import { useHistory } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
-import { schemaArray } from "../formSchemas/landingPage";
+import { schemaArray } from "../formSchemas/landingpage";
 import { Button } from "@material-ui/core";
 // import { currencyFormat } from "../utils/currencyFormat";
 
@@ -285,3 +285,4 @@ function LandingPage(props) {
 }
 
 export default LandingPage;
+
