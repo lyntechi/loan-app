@@ -1,0 +1,133 @@
+.landing-page {
+    .container {
+      max-width: 960px;
+      margin: 0rem auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      form {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 590px;
+        align-items: center;
+        background: ghostwhite;
+        height: 680px;
+        box-shadow: 0px 8px 17px 2px rgba(0, 0, 0, 0.14),
+          0px 3px 14px 2px rgba(0, 0, 0, 0.12),
+          0px 5px 5px -3px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgb(255, 255, 255);
+        p {
+          font-size: 13px;
+          width: 80%;
+          margin: 20px 0px;
+        }
+        .steps-tracker {
+          display: flex;
+          justify-content: space-between;
+          width: 70%;
+          padding: 0px 30px;
+          text-align: center;
+          .steps-tracker-changer {
+            background: #3f51b5;
+            margin: 10px;
+            border-radius: 50px;
+            width: 25px;
+            padding: 4px 4px;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            text-align: center;
+          }
+          .steps-tracker-p {
+            background: rgb(160, 159, 159);
+            margin: 10px;
+            border-radius: 50px;
+            width: 25px;
+            padding: 4px 4px;
+            color: white;
+            font-weight: bold;
+            position: relative;
+            text-align: center;
+          }
+  
+          .line {
+            border-top: 2px solid rgb(155, 152, 152);
+            width: 60px;
+            position: absolute;
+            left: 25px;
+            top: 10px;
+          }
+        }
+  
+        h1 {
+          font-size: 2rem;
+          margin: 20px 0px;
+        }
+        h2 {
+          color: rgb(109, 104, 104);
+        }
+        input {
+          padding: 8px;
+          outline: none;
+          border: 1px solid black;
+          width: 100%;
+          margin-bottom: 0px;
+        }
+        .form-questions {
+          width: 500px;
+          height: 300px;
+          background: rgb(231, 229, 229);
+          padding: 34px 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          h1 {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-bottom: 30px;
+          }
+          .error-p {
+            color: red;
+            font-size: 13px;
+            margin: 5px;
+            width: 100%;
+            text-align: center;
+          }
+          .back-btn {
+            margin-top: 5px;
+            padding: 10px;
+            width: 100%;
+            background: rgb(71, 71, 73);
+            color: white;
+          }
+          .btn-disabled {
+            margin-top: 5px;
+            padding: 10px;
+            width: 100%;
+            background: rgba(192, 192, 192, 0.685);
+            color: rgb(161, 155, 155);
+            cursor: default;
+          }
+          .btn-next {
+            margin-top: 30px;
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+          }
+        }
+        .list-items {
+          margin: 30px 0px;
+          display: flex;
+          align-items: center;
+          .lock-logo {
+            font-size: 3rem;
+            margin: 0px 15px;
+          }
+        }
+      }
+    }
+  }
+  
