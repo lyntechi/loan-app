@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 .create-account-page {
   .container {
     max-width: 960px;
@@ -6,6 +8,9 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    @include responsive(mobile) {
+      width: 95%;
+    }
     form {
       margin-top: 5rem;
       display: flex;
@@ -20,6 +25,11 @@
         0px 5px 5px -3px rgba(0, 0, 0, 0.2);
       border: 1px solid rgb(255, 255, 255);
       padding: 30px;
+      @include responsive(mobile) {
+        width: 100%;
+        padding: 10px;
+        margin-top: 2.5rem;
+      }
       :nth-child(3) {
         font-weight: bold;
       }
@@ -29,11 +39,17 @@
         outline: none;
         border: 1px solid black;
         margin-bottom: 0px;
+        @include responsive(mobile) {
+          width: 95%;
+        }
       }
       p {
         text-align: center;
         font-size: 1rem;
         margin-top: 20px;
+        @include responsive(mobile) {
+          font-size: 13px;
+        }
       }
 
       h5 {
@@ -42,11 +58,18 @@
         text-align: center;
         margin: 40px 0px;
         width: 100%;
+        @include responsive(mobile) {
+          font-size: 1.2rem;
+        }
         .green-flag {
           width: 50px;
           position: absolute;
           top: 40px;
           left: 220px;
+          @include responsive(mobile) {
+            top: 28px;
+            left: 120px;
+          }
         }
       }
       .error-p {

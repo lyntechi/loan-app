@@ -1,3 +1,5 @@
+@import "./mixins.scss";
+
 nav {
   background: #8a002e;
   .container {
@@ -9,15 +11,26 @@ nav {
     max-width: 960px;
     margin: 0 auto;
     color: ghostwhite;
+    @include responsive(mobile) {
+      justify-content: center;
+    }
     h1 {
       font-size: 1.4rem;
       position: relative;
       padding: 0px 15px;
+      @include responsive(mobile) {
+        padding: 0px;
+      }
+
       .car-logo {
         position: absolute;
         font-size: 1.7rem;
         top: 0px;
         left: 195px;
+        @include responsive(mobile) {
+          left: 78px;
+          top: -17px;
+        }
       }
     }
   }
