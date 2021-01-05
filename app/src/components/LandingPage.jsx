@@ -208,7 +208,7 @@ function LandingPage(props) {
           <span>will NOT affect your credit score.</span>
         </p>
 
-        <div className="form-questions">
+        <div className="form-questions" data-testid="form-inputs">
           <h1>
             {/*formSteps is the array I created above with all my form inputs and labels and i added activeStep to check the index.
            so this really reads as formSteps[0] because activeStep initial state starts at 0*/}
