@@ -1,0 +1,23 @@
+nav {
+  background: ghostwhite;
+  .container {
+    background: ghostwhite;
+    height: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    h1 {
+      font-size: 1.4rem;
+      position: relative;
+      padding: 0px 15px;
+      .car-logo {
+        position: absolute;
+        font-size: 1.7rem;
+        top: 0px;
+        left: 195px;
+      }
+    }
+  }
+}
