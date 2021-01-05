@@ -147,7 +147,7 @@ function LandingPage(props) {
     //these are the calculations I created to determine if user should
     //route to create account or disqualified page
     if (usersCreditScore < 600 || priceSelected > usersIncome) {
-    //   history.push("/disqualified");
+      history.push("/disqualified");
     } else if (usersCreditScore > 600 || priceSelected < usersIncome) {
       history.push("/create-account");
     }

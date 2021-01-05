@@ -3,6 +3,8 @@ import Nav from "./components/Nav";
 import LandingPage from "./components/LandingPage";
 import CreateAccount from './components/CreateAccount';
 import { Route } from "react-router-dom";
+import DisqualificationPage from "./components/DisqualificationPage";
+
 
 
 function App() {
@@ -32,6 +34,11 @@ function App() {
       <Route exact path="/create-account">
         <section className="create-account-page">
           <CreateAccount apiData={apiData} />
+        </section>
+      </Route>
+      <Route exact path="/disqualified">
+        <section className="disqualify-page">
+          <DisqualificationPage apiData={apiData} />
         </section>
       </Route>
     </div>
