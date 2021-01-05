@@ -149,7 +149,7 @@ function LandingPage(props) {
     if (usersCreditScore < 600 || priceSelected > usersIncome) {
     //   history.push("/disqualified");
     } else if (usersCreditScore > 600 || priceSelected < usersIncome) {
-    //   history.push("/create-account");
+      history.push("/create-account");
     }
   };
 
