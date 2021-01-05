@@ -1,0 +1,19 @@
+@import "./mixins.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+}
+body {
+  font-family: $mainFont;
+}
+html {
+  height: 100%;
+  min-height: 100vh;
+}
+.app {
+  height: 100%;
+  min-height: 100vh;
+}
