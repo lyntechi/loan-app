@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Nav from "./components/Nav";
-import LandingPage from "./components/LandingPage"
+import LandingPage from "./components/LandingPage";
+import CreateAccount from './components/CreateAccount';
 import { Route } from "react-router-dom";
 
 
@@ -26,6 +27,11 @@ function App() {
       <Route exact path="/">
         <section className="landing-page">
           <LandingPage apiData={apiData} />
+        </section>
+      </Route>
+      <Route exact path="/create-account">
+        <section className="create-account-page">
+          <CreateAccount apiData={apiData} />
         </section>
       </Route>
     </div>
