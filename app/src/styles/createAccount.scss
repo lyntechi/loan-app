@@ -84,6 +84,9 @@
         width: 70%;
         background: #8a002e;
         color: white;
+        @include responsive(mobile) {
+          width: 270px;
+        }
       }
       .submit-disabled {
         margin-top: 30px;
@@ -92,6 +95,9 @@
         background: rgba(192, 192, 192, 0.685);
         color: rgb(129, 122, 122);
         cursor: default;
+        @include responsive(mobile) {
+          width: 270px;
+        }
       }
     }
   }

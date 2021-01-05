@@ -42,8 +42,10 @@
         width: 70%;
         padding: 0px 30px;
         text-align: center;
+        margin-top: 15px;
         @include responsive(mobile) {
           width: 320px;
+          height: 44px;
           margin-top: 15px;
         }
         .steps-tracker-changer {
@@ -133,6 +135,9 @@
           width: 100%;
           background: #558295;
           color: white;
+          @include responsive(mobile) {
+            width: 290px;
+          }
         }
         .btn-disabled {
           margin-top: 5px;
@@ -141,6 +146,9 @@
           background: rgba(192, 192, 192, 0.685);
           color: rgb(161, 155, 155);
           cursor: default;
+          @include responsive(mobile) {
+            width: 290px;
+          }
         }
         .btn-next {
           margin-top: 5px;
@@ -148,6 +156,9 @@
           width: 100%;
           background: #28833e;
           cursor: pointer;
+          @include responsive(mobile) {
+            width: 290px;
+          }
         }
       }
       .list-items {
