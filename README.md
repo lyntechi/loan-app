@@ -23,7 +23,6 @@
 <h3>Mobile/Desktop</h3>
 <p>App is fully responsive for desktop and mobile.</p>
 <hr/>
-<hr/>
 <h3>Form Validations Set up</h3>
 <li>Landing page</li>
 <li>Create Account</li>
