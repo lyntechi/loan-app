@@ -2,7 +2,8 @@
   <a href="https://auto-zap-loans.netlify.app/">Visit Website</a>
 <br/>
 
-  <a href="https://docs.google.com/document/d/1glAh1qOnHCs8PfOUA_mKJaqGGo_RCiFAQXZoW6pdyf8/edit?usp=sharing">View Design Doc</a>
+<a href="https://docs.google.com/document/d/1glAh1qOnHCs8PfOUA_mKJaqGGo_RCiFAQXZoW6pdyf8/edit?usp=sharing">View Design Doc</a>
+
   <hr/>
   <h3>About</h3>
   <p>This auto loan pre-qualification app is really user friendly, operates smooth and quickly to get a 
@@ -22,6 +23,7 @@
 <h3>Mobile/Desktop</h3>
 <p>App is fully responsive for desktop and mobile.</p>
 <hr/>
+<hr/>
 <h3>Form Validations Set up</h3>
 <li>Landing page</li>
 <li>Create Account</li>
@@ -30,6 +32,7 @@
 <li>React</li>
 <li>React icons</li>
 <li>React Router Dom</li>
+<li>@testing-library/react</li>
 <li>JavaScript</li>
 <li>Redux</li>
 <li>Sass</li>
