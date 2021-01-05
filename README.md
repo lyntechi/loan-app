@@ -1,6 +1,5 @@
   <h1>AutoZap Loans <FaCarSide className="car-logo" /></h1>
-  <a href="
-auto-zap-loans.netlify.app">Visit Website</a><br/>
+  <a href="https://auto-zap-loans.netlify.app/">Visit Website</a><br/>
   <a href="https://docs.google.com/document/d/1glAh1qOnHCs8PfOUA_mKJaqGGo_RCiFAQXZoW6pdyf8/edit?usp=sharing">View Design Doc</a>
   <hr/>
   <h3>About</h3>
