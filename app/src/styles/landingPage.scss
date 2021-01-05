@@ -63,6 +63,9 @@
           position: relative;
           text-align: center;
           height: 25px;
+          @include responsive(mobile) {
+            margin: 10px 9px;
+          }
         }
         .steps-tracker-p {
           background: rgb(160, 159, 159);
@@ -75,6 +78,9 @@
           position: relative;
           text-align: center;
           height: 25px;
+          @include responsive(mobile) {
+            margin: 10px 9px;
+          }
         }
 
         .line {
@@ -117,7 +123,7 @@
         justify-content: center;
         @include responsive(mobile) {
           width: 98%;
-          padding: 34px 10px;
+          padding: 44px 10px;
           height: 100%;
         }
         h1 {
