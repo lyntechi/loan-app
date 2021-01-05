@@ -1,0 +1,10 @@
+{
+    "messages": [
+      {
+        "disqualifyMessage": "Based on your answers you arent eligible at the moment!",
+        "positiveFlag": "https://cdn1.iconfinder.com/data/icons/prettyoffice8/256/Flag-green.png",
+        "priceLimit": "Bad request! Please enter purchase price under $1,000,000"
+      }
+    ]
+  }
+  
