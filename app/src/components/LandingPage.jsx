@@ -3,7 +3,7 @@ import { FcLock } from "react-icons/fc";
 import { convertToNumber } from "../utils/convertToNumber";
 import { useHistory } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
-import { schemaArray } from "../formSchemas/landingPage";
+import { schemaArray } from "../formSchemas/landingpage";
 import { Button } from "@material-ui/core";
 // import { currencyFormat } from "../utils/currencyFormat";
 
@@ -147,9 +147,9 @@ function LandingPage(props) {
     //these are the calculations I created to determine if user should
     //route to create account or disqualified page
     if (usersCreditScore < 600 || priceSelected > usersIncome) {
-    //   history.push("/disqualified");
+      history.push("/disqualified");
     } else if (usersCreditScore > 600 || priceSelected < usersIncome) {
-    //   history.push("/create-account");
+      history.push("/create-account");
     }
   };
 
@@ -285,3 +285,4 @@ function LandingPage(props) {
 }
 
 export default LandingPage;
+
