@@ -2,22 +2,31 @@
 
 nav {
   background: #8a002e;
+  position: sticky;
+  top: 0;
+  z-index: 1;
   .container {
     background: #8a002e;
     height: 80px;
     display: flex;
+
     justify-content: space-between;
     align-items: center;
     max-width: 960px;
     margin: 0 auto;
     color: ghostwhite;
- 
+    @include responsive(mobile) {
+      height: 100%;
+      padding: 15px 0px;
+      flex-direction: column;
+    }
     h1 {
       font-size: 1.4rem;
       position: relative;
       padding: 0px 15px;
       @include responsive(mobile) {
         padding-left: 10px;
+        font-size: 1.2rem;
       }
 
       .car-logo {
@@ -26,8 +35,9 @@ nav {
         top: 0px;
         left: 195px;
         @include responsive(mobile) {
-          left: 78px;
-          top: -17px;
+          left: 160px;
+          top: 2px;
+          font-size: 1.4rem;
         }
       }
     }
@@ -35,9 +45,17 @@ nav {
       padding-right: 10px;
 
       display: flex;
+      @include responsive(mobile) {
+        padding-left: 10px;
+        font-size: 12px;
+        margin-top: 5px;
+      }
       .heart-logo {
         font-size: 20px;
         margin: 0px 6px;
+        @include responsive(mobile) {
+          font-size: 14px;
+        }
       }
     }
   }

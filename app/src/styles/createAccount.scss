@@ -86,6 +86,7 @@
         color: white;
         @include responsive(mobile) {
           width: 270px;
+          height: 40px;
         }
       }
       .submit-disabled {
@@ -97,6 +98,7 @@
         cursor: default;
         @include responsive(mobile) {
           width: 270px;
+          height: 40px;
         }
       }
     }

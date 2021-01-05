@@ -161,41 +161,43 @@ function LandingPage(props) {
           {/* the className checks what step on the form the user is
            on so that it can highlight the numbers at the top of the form. I couldnt figure out how to dynamically add
            the numbers so I had to hardcode from 0-4*/}
-          <p
-            className={
-              activeStep === 0 ? "steps-tracker-changer" : "steps-tracker-p"
-            }
-          >
-            1<span className="line"></span>
-          </p>
-          <p
-            className={
-              activeStep === 1 ? "steps-tracker-changer" : "steps-tracker-p"
-            }
-          >
-            2<span className="line"></span>
-          </p>
-          <p
-            className={
-              activeStep === 2 ? "steps-tracker-changer" : "steps-tracker-p"
-            }
-          >
-            3<span className="line"></span>
-          </p>
-          <p
-            className={
-              activeStep === 3 ? "steps-tracker-changer" : "steps-tracker-p"
-            }
-          >
-            4<span className="line"></span>
-          </p>
-          <p
-            className={
-              activeStep === 4 ? "steps-tracker-changer" : "steps-tracker-p"
-            }
-          >
-            5
-          </p>
+          <div className="steps">
+            <p
+              className={
+                activeStep === 0 ? "steps-tracker-changer" : "steps-tracker-p"
+              }
+            >
+              1<span className="line"></span>
+            </p>
+            <p
+              className={
+                activeStep === 1 ? "steps-tracker-changer" : "steps-tracker-p"
+              }
+            >
+              2<span className="line"></span>
+            </p>
+            <p
+              className={
+                activeStep === 2 ? "steps-tracker-changer" : "steps-tracker-p"
+              }
+            >
+              3<span className="line"></span>
+            </p>
+            <p
+              className={
+                activeStep === 3 ? "steps-tracker-changer" : "steps-tracker-p"
+              }
+            >
+              4<span className="line"></span>
+            </p>
+            <p
+              className={
+                activeStep === 4 ? "steps-tracker-changer" : "steps-tracker-p"
+              }
+            >
+              5
+            </p>
+          </div>
         </div>
 
         <h1>Auto Loan Pre-Qualification</h1>
