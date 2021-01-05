@@ -1,13 +1,14 @@
 nav {
-  background: ghostwhite;
+  background: #8a002e;
   .container {
-    background: ghostwhite;
+    background: #8a002e;
     height: 80px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     max-width: 960px;
     margin: 0 auto;
+    color: ghostwhite;
     h1 {
       font-size: 1.4rem;
       position: relative;

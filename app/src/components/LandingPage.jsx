@@ -3,9 +3,10 @@ import { FcLock } from "react-icons/fc";
 import { convertToNumber } from "../utils/convertToNumber";
 import { useHistory } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
-import { schemaArray } from "../formSchemas/landingpage";
+import { schemaArray } from "../formSchemas/landingPage";
 import { Button } from "@material-ui/core";
 // import { currencyFormat } from "../utils/currencyFormat";
+import CurrencyFormat from "react-currency-format";
 
 function LandingPage(props) {
   //This is the initial state of the landingpage form
@@ -16,6 +17,7 @@ function LandingPage(props) {
     income: "",
     creditScore: "",
   });
+
   //im using the useHistory hook from react-router-dom so that the user
   //is routed to a certain route based on the answers they enter in the form
   const history = useHistory();
@@ -65,14 +67,13 @@ function LandingPage(props) {
     {
       label: "Please Enter Purchase Price",
       input: (
-        <input
+        <CurrencyFormat
+          thousandSeparator={true}
+          prefix={"$"}
           placeholder="$8,000"
-          type="text"
           name="price"
           onChange={inputHandler}
           value={formState.price}
-          min="0.01"
-          step="0.01"
         />
       ),
     },
@@ -101,14 +102,14 @@ function LandingPage(props) {
     {
       label: "Please Enter Annual Income",
       input: (
-        <input
+        <CurrencyFormat
+          thousandSeparator={true}
+          prefix={"$"}
           placeholder="$40,000"
           type="text"
           onChange={inputHandler}
           name="income"
           value={formState.income}
-          min="0.01"
-          step="0.01"
         />
       ),
     },
@@ -116,12 +117,12 @@ function LandingPage(props) {
       label: "Please Enter Your Credit Score",
       input: (
         <input
-          placeholder="Credit Score"
           type="number"
+          placeholder="Enter Credit Score"
           onChange={inputHandler}
           name="creditScore"
           value={formState.creditScore}
-          min="0.01"
+          min="300"
           step="0.01"
         />
       ),
@@ -196,6 +197,7 @@ function LandingPage(props) {
             5
           </p>
         </div>
+
         <h1>Auto Loan Pre-Qualification</h1>
         <h2>Get pre-qualified in just a few minutes</h2>
         <p>
@@ -285,4 +287,3 @@ function LandingPage(props) {
 }
 
 export default LandingPage;
-
