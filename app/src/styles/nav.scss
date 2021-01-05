@@ -6,20 +6,18 @@ nav {
     background: #8a002e;
     height: 80px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     max-width: 960px;
     margin: 0 auto;
     color: ghostwhite;
-    @include responsive(mobile) {
-      justify-content: center;
-    }
+ 
     h1 {
       font-size: 1.4rem;
       position: relative;
       padding: 0px 15px;
       @include responsive(mobile) {
-        padding: 0px;
+        padding-left: 10px;
       }
 
       .car-logo {
@@ -31,6 +29,15 @@ nav {
           left: 78px;
           top: -17px;
         }
+      }
+    }
+    h2 {
+      padding-right: 10px;
+
+      display: flex;
+      .heart-logo {
+        font-size: 20px;
+        margin: 0px 6px;
       }
     }
   }
