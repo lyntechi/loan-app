@@ -15,7 +15,7 @@
  rest api will be rendered to alert the user)</p>
    <hr/>
 <h3>Build/run info</h3>
-<p>This project uses npm. Run "npm install" in the /app directory to install the NPM dependencies, then run "npm start" while still being in the /app directory  </p>
+<p>This project uses npm. Run "npm install" in the /app directory to install the NPM dependencies, then run "npm start" while still being in the /app directory. Run "npm run test" to run the suite test I created and if you get a message <span style={{fontWeight: "bold"}}>"No tests found related to files changed since last commit. Press `a` to run all tests, or run Jest with `--watchAll`." </span> then just press a to run all tests.</p>
 <hr/>
 <h3>State Management</h3>
 <p>React Redux</p>
