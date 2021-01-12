@@ -5,10 +5,16 @@ import { useHistory } from "react-router-dom";
 import { FaTimes } from "react-icons/fa";
 import { schemaArray } from "../formSchemas/landingPage";
 import { Button } from "@material-ui/core";
-// import { currencyFormat } from "../utils/currencyFormat";
 import CurrencyFormat from "react-currency-format";
+import { connect } from "react-redux";
+import { fetchApiData } from "../actions/messagesActions";
 
 function LandingPage(props) {
+  const { fetchApiData } = props;
+  useEffect(() => {
+    fetchApiData();
+  }, [fetchApiData]);
+
   //This is the initial state of the landingpage form
   const [formState, setFormState] = useState({
     price: "",
@@ -217,10 +223,15 @@ function LandingPage(props) {
           {/*Here I am checking if the price the user enters is higher than 1,000,000 through the bad request
           coming from the fake rest api I created*/}
           {convertToNumber(formState.price) > 1000000 ? (
-            <p className="error-p">
-              {props.apiData.priceLimit}
-              <FaTimes />
-            </p>
+            <>
+              {props.message.map((message) => {
+                return (
+                  <p className="error-p" key={message.id}>
+                    {message.priceLimit} <FaTimes />
+                  </p>
+                );
+              })}
+            </>
           ) : (
             ""
           )}
@@ -288,4 +299,9 @@ function LandingPage(props) {
   );
 }
 
-export default LandingPage;
+const mapStateToProps = (state) => {
+  return {
+    message: state.messagesReducer.apiData.messages,
+  };
+};
+export default connect(mapStateToProps, { fetchApiData })(LandingPage);

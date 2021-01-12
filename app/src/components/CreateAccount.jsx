@@ -2,8 +2,15 @@ import React, { useState, useEffect } from "react";
 import * as Yup from "yup";
 import { formSchema } from "../formSchemas/createAccount";
 import { Button } from "@material-ui/core";
+import { connect } from "react-redux";
+import { fetchApiData } from "../actions/messagesActions";
 
 function CreateAccount(props) {
+  const { fetchApiData } = props;
+  useEffect(() => {
+    fetchApiData();
+  }, [fetchApiData]);
+
   //This is the initial state of the create account form
   const [formState, setFormState] = useState({
     username: "",
@@ -53,7 +60,19 @@ function CreateAccount(props) {
       <form onSubmit={onSubmitHandler}>
         <h5>
           Important Message:{" "}
-          <img src={props.apiData.positiveFlag} alt="" className="green-flag" />
+          {props.message.map((message) => {
+            return (
+              <>
+                {" "}
+                <img
+                  src={message.positiveFlag}
+                  alt=""
+                  className="green-flag"
+                  key={message.id}
+                />
+              </>
+            );
+          })}
         </h5>
 
         <p>Great News! Based on your answers, You have been Pre-approved!</p>
@@ -104,4 +123,10 @@ function CreateAccount(props) {
   );
 }
 
-export default CreateAccount;
+const mapStateToProps = (state) => {
+  console.log("THIS IS STATE CREATE ACCOUNT", state);
+  return {
+    message: state.messagesReducer.apiData.messages,
+  };
+};
+export default connect(mapStateToProps, { fetchApiData })(CreateAccount);

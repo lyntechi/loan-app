@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import { formReducer } from "./formReducer";
+import { messagesReducer } from "./messagesReducer";
 
 export const allReducers = combineReducers({
-  formReducer: formReducer,
+  messagesReducer: messagesReducer,
 });

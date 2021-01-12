@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { connect } from "react-redux";
+import { fetchApiData } from "../actions/messagesActions";
 
 function DisqualificationPage(props) {
+  const { fetchApiData } = props;
+  useEffect(() => {
+    fetchApiData();
+  }, [fetchApiData]);
   return (
     <div className="container">
       <div className="message-container">
         <h1>Important Message:</h1>
-        <h2>{props.apiData.disqualifyMessage}</h2>
+        {props.message.map((message) => {
+          return <h2 key={message.id}>{message.disqualifyMessage}</h2>;
+        })}
+
         <div>
           <p>
             Please call Customer Service to get more information{" "}
@@ -18,4 +27,9 @@ function DisqualificationPage(props) {
   );
 }
 
-export default DisqualificationPage;
+const mapStateToProps = (state) => {
+  return {
+    message: state.messagesReducer.apiData.messages,
+  };
+};
+export default connect(mapStateToProps, { fetchApiData })(DisqualificationPage);
