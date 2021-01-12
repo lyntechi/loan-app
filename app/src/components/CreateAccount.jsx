@@ -124,7 +124,6 @@ function CreateAccount(props) {
 }
 
 const mapStateToProps = (state) => {
-  console.log("THIS IS STATE CREATE ACCOUNT", state);
   return {
     message: state.messagesReducer.apiData.messages,
   };
